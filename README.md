@@ -70,9 +70,9 @@ The notebooks were developed and run in [Google Colab](https://colab.research.go
 | `preprocessing.ipynb` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PetrosV00/smart-home-energy-data-mining/blob/main/Notebooks/preprocessing.ipynb) |
 | `models.ipynb` | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/PetrosV00/smart-home-energy-data-mining/blob/main/Notebooks/models.ipynb) |
 
-1. Download the raw dataset from the [UCI repository](https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption), unzip it and upload the text file to your Colab session (or to Google Drive). It is only needed for `preprocessing.ipynb`.
-2. Run `preprocessing.ipynb`, which also uses `CSV-pickles/weather_conditions.csv`.
-3. Run `models.ipynb`. The preprocessed data is also stored in `CSV-pickles/`.
+1. `preprocessing.ipynb` needs the raw dataset, which is too large for GitHub. Download it from the [UCI repository](https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption), unzip it and upload `household_power_consumption.txt` to the Colab session. The daily weather data is in `CSV-pickles/weather_conditions.csv`.
+2. `models.ipynb` can be run directly: it loads the preprocessed dataset from `CSV-pickles/df_final.pkl`, so the preprocessing does not have to be repeated.
+3. The first cell of each notebook clones this repository, so that the files in `CSV-pickles/` are available in the Colab session.
 
 Main libraries: pandas, NumPy, scikit-learn, mlxtend, Prophet, matplotlib, seaborn. Colab provides most of them; if an import fails, install the package in the first cell with `!pip install <package>`.
 
